@@ -1,0 +1,47 @@
+{
+  "// This is an example configuration file for OpenAPI to MCP Generator": "// Comments like this are for documentation only and should be removed in actual config",
+  
+  "// Type of API endpoint GraphQL or OpenAPI": "",
+  "type": "graphql",
+  "// OpenAPI Specification Settings": "",
+  "// spec can be a local file path or HTTP/HTTPS URL": "",
+  "spec": "./path/to/openapi-spec.json",
+  "// overlays can be comma-separated local file paths or HTTP/HTTPS URLs": "",
+  "overlays": "./path/to/overlay1.json,./path/to/overlay2.json",
+  "// Example with HTTP URLs": "",
+  "// spec": "https://example.com/api/openapi.json",
+  "// overlays": "https://example.com/api/overlay.json,./local/overlay.json",
+  "// Type of supported transport stream or sse": "",
+  "transport": "stream",
+  
+  "// MCP Server Settings": "",
+  "port": 8080,
+  "targetUrl": "https://api.example.com",
+  
+  "// API Filtering by OpenAPI endpoint or GraphQL query objects or parameters and parameters preset": "",
+  "presetParams": {
+    "parameter": "value"
+  },
+  "whitelist": "getPets,createPet,/pets/*",
+  "blacklist": "deletePet,/admin/*",
+  
+  "// Authentication & Security": "",
+  "apiKey": "your-api-key",
+  "securitySchemeName": "ApiKeyAuth",
+  "securityCredentials": {
+    "ApiKeyAuth": "your-api-key",
+    "OAuth2": "your-oauth-token"
+  },
+  
+  "// Custom Headers": "",
+  "headers": {
+    "X-Custom-Header": "custom-value",
+    "User-Agent": "OpenAPI-MCP-Client/1.0"
+  },
+
+  "// Depth of the API discovery for GraphQL. Include list of parameters in output and filter parameters": "",
+  "depth": 1,
+  
+  "// Other Settings": "",
+  "disableXMcp": false
+}
